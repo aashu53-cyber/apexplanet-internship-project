@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2 - Interactive Component Suite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">TaskBrand</a>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#carouselSection">Slider</a></li>
+        <li><a href="#statsSection">Counters</a></li>
+        <li><a href="#contactSection">Form</a></li>
+        <li><button class="theme-btn" id="themeToggle">🌙 Dark Mode</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="card" style="text-align: center; margin-bottom: 2rem;">
+      <h1>Task 2: Interactive JavaScript Components</h1>
+      <p style="color: var(--text-light); margin-top: 0.5rem;">Explore vanilla JS components including a modal popup, carousel, local storage themes, and live form validation.</p>
+      <button class="modal-trigger-btn" id="modalTrigger">Open Interactive Modal</button>
+    </section>
+
+    <!-- Image Carousel Section -->
+    <section id="carouselSection" class="carousel-container">
+      <div class="carousel-slide active">
+        <h3>Component One</h3>
+        <p>Dynamic Image Slider with automated interval sliding and manual arrow controls.</p>
+      </div>
+      <div class="carousel-slide">
+        <h3>Component Two</h3>
+        <p>Responsive multi-state DOM architecture engineered with ES6+ vanilla scripting.</p>
+      </div>
+      <div class="carousel-slide">
+        <h3>Component Three</h3>
+        <p>Persistent theme preferences synchronized directly with browser LocalStorage.</p>
+      </div>
+      <div class="carousel-btns">
+        <button class="carousel-btn" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-btn" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Animated Counters Section with Increase/Decrease Controls -->
+    <section id="statsSection" class="card-grid" style="margin-top: 3rem;">
+      <div class="card counter-card" style="text-align: center;">
+        <h2 class="counter" data-target="150" style="font-size: 2.5rem; color: var(--primary);">0</h2>
+        <p>Completed Tasks</p>
+        <div class="counter-controls" style="margin-top: 1rem; display: flex; justify-content: center; gap: 10px;">
+          <button class="counter-btn decrease-btn" data-action="decrease">-</button>
+          <button class="counter-btn increase-btn" data-action="increase">+</button>
+        </div>
+      </div>
+      <div class="card counter-card" style="text-align: center;">
+        <h2 class="counter" data-target="98" style="font-size: 2.5rem; color: var(--primary);">0</h2>
+        <p>Performance Rate (%)</p>
+        <div class="counter-controls" style="margin-top: 1rem; display: flex; justify-content: center; gap: 10px;">
+          <button class="counter-btn decrease-btn" data-action="decrease">-</button>
+          <button class="counter-btn increase-btn" data-action="increase">+</button>
+        </div>
+      </div>
+      <div class="card counter-card" style="text-align: center;">
+        <h2 class="counter" data-target="24" style="font-size: 2.5rem; color: var(--primary);">0</h2>
+        <p>Hours Support</p>
+        <div class="counter-controls" style="margin-top: 1rem; display: flex; justify-content: center; gap: 10px;">
+          <button class="counter-btn decrease-btn" data-action="decrease">-</button>
+          <button class="counter-btn increase-btn" data-action="increase">+</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Validation Section -->
+    <section id="contactSection" style="margin-top: 3rem;">
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <h2>Real-Time Form Validation</h2>
+        <p style="color: var(--text-light);">Type into the inputs to test live validation triggers.</p>
+      </div>
+
+      <div class="contact-form">
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+            <div class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="john@example.com">
+            <div class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number (10 Digits)</label>
+            <input type="text" id="phone" placeholder="9876543210">
+            <div class="error-message"></div>
+          </div>
+          <button type="submit" class="submit-btn">Submit Form</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Popup Overlay -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h2>Interactive Modal Window</h2>
+      <p style="margin-top: 1rem; color: var(--text-light);">This modal popup is controlled dynamically via JavaScript DOM manipulation. Click outside this box or press the close button to dismiss it.</p>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Scroll to top">&#8679;</button>
+
+  <footer>
+    <p>&copy; 2026 Task 2 Project. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

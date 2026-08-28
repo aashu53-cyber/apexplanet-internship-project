@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 - Todo List App | ApexPlanet</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">ApexPlanet <span>Task 3 - Todo App</span></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html" class="active">Home</a>
+            <a href="#todo-section">My Tasks</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container">
+        <section id="todo-section" class="app-card">
+            <h2><i class="fa-solid fa-list-check"></i> Task Manager</h2>
+            
+            <div class="todo-input-box">
+                <input type="text" id="todo-input" placeholder="What needs to be done?">
+                <button id="add-todo-btn"><i class="fa-solid fa-plus"></i> Add Task</button>
+            </div>
+            
+            <div class="todo-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <ul id="todo-list">
+                <!-- Dynamic Todos Go Here -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 ApexPlanet Software Pvt. Ltd. | Internship Task 3[cite: 1]</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/mobile.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
